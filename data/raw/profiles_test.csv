@@ -1,0 +1,121 @@
+profile_id,years_experience,projects_count,certifications_count,skill_python,skill_sql,skill_machine_learning,skill_statistics,skill_pandas,skill_numpy,skill_scikit_learn,skill_pytorch,skill_docker,skill_javascript,career_class
+P0001,3,4,2,3,0,0,2,1,2,2,2,2,3,Data Engineer
+P0002,3,7,2,1,0,1,3,3,1,1,1,3,3,Data Engineer
+P0003,0,3,1,1,0,3,0,0,2,2,2,1,3,QA Automation Engineer
+P0004,3,7,2,3,2,3,3,0,2,0,2,2,0,DevOps Engineer
+P0005,1,3,0,3,1,1,1,0,1,0,1,3,3,QA Automation Engineer
+P0006,3,4,2,1,0,3,1,3,3,1,1,1,1,Cybersecurity Analyst
+P0007,3,5,4,2,1,1,3,1,1,1,3,1,2,Full Stack Developer
+P0008,5,6,3,0,1,3,0,3,0,1,2,0,3,Cybersecurity Analyst
+P0009,0,3,3,3,0,0,0,2,0,0,0,2,0,Full Stack Developer
+P0010,0,3,2,2,0,3,2,2,0,2,0,1,2,Cybersecurity Analyst
+P0011,0,3,0,3,3,1,0,3,2,2,1,3,0,Machine Learning Engineer
+P0012,3,7,2,2,0,2,0,2,1,2,0,0,1,Frontend Developer
+P0013,5,6,2,0,2,2,1,1,3,0,2,2,3,Frontend Developer
+P0014,0,3,4,3,3,1,0,2,2,0,2,2,0,AI Engineer
+P0015,4,7,2,2,1,3,1,1,0,1,0,0,1,QA Automation Engineer
+P0016,3,3,3,3,1,1,2,3,1,2,3,0,2,Data Analyst
+P0017,0,0,2,1,0,3,0,0,2,2,1,3,2,DevOps Engineer
+P0018,5,4,0,2,1,3,3,2,2,1,3,3,3,DevOps Engineer
+P0019,3,0,0,1,3,3,1,2,1,2,0,0,0,Full Stack Developer
+P0020,0,2,0,1,1,3,1,2,0,3,0,0,2,Data Scientist
+P0021,4,3,1,3,1,3,2,3,2,2,3,2,0,Backend Developer
+P0022,4,3,1,1,1,2,2,3,3,0,0,3,2,Backend Developer
+P0023,4,2,3,3,2,3,2,1,2,2,2,3,3,Frontend Developer
+P0024,3,0,0,3,3,2,1,3,0,2,3,0,0,Data Scientist
+P0025,5,1,2,2,3,3,1,3,0,3,3,0,1,Data Analyst
+P0026,5,3,4,0,3,2,2,0,0,2,2,3,3,Machine Learning Engineer
+P0027,3,7,0,3,3,2,0,3,3,1,3,3,1,Machine Learning Engineer
+P0028,5,0,2,0,0,1,3,1,1,1,1,2,3,DevOps Engineer
+P0029,3,0,3,0,1,0,3,3,3,3,3,2,2,Data Analyst
+P0030,0,7,3,2,2,1,2,1,1,1,1,1,0,Machine Learning Engineer
+P0031,5,7,2,2,1,0,1,0,3,2,3,0,0,QA Automation Engineer
+P0032,4,7,2,3,2,3,0,3,0,3,3,1,0,Data Engineer
+P0033,5,2,3,0,0,3,0,0,1,0,2,2,3,Data Analyst
+P0034,3,6,4,0,3,2,0,3,2,3,1,0,1,Backend Developer
+P0035,1,2,1,3,2,1,2,1,2,2,1,1,1,Data Analyst
+P0036,0,0,2,1,3,2,0,1,2,1,2,1,0,Full Stack Developer
+P0037,4,3,1,2,0,3,0,3,0,3,3,1,3,QA Automation Engineer
+P0038,2,6,3,1,1,3,2,2,1,2,0,1,2,Backend Developer
+P0039,1,1,0,3,1,1,2,1,2,3,0,0,3,Data Engineer
+P0040,3,3,3,0,2,3,1,0,3,3,1,2,2,Frontend Developer
+P0041,3,7,4,1,3,1,1,2,0,3,2,2,3,Cybersecurity Analyst
+P0042,1,4,1,0,1,2,2,0,3,0,0,1,1,Data Analyst
+P0043,1,7,0,3,0,0,0,3,0,2,3,2,0,Backend Developer
+P0044,4,6,2,3,1,3,2,0,1,0,0,1,3,Data Engineer
+P0045,0,5,3,0,3,3,1,1,3,0,2,3,0,Data Engineer
+P0046,1,1,4,3,1,3,2,1,1,2,1,3,0,Full Stack Developer
+P0047,4,4,3,3,3,3,2,1,0,3,3,3,2,AI Engineer
+P0048,3,1,2,3,0,0,0,2,2,0,3,2,0,Data Analyst
+P0049,1,2,3,0,0,3,2,1,1,0,2,1,2,Frontend Developer
+P0050,0,1,4,1,1,1,1,1,2,0,2,3,1,Data Engineer
+P0051,1,4,2,0,3,3,0,0,0,0,3,1,0,DevOps Engineer
+P0052,2,0,2,3,3,1,0,2,3,3,2,1,3,Data Engineer
+P0053,3,0,4,2,0,2,0,1,0,0,1,3,3,DevOps Engineer
+P0054,5,4,2,2,0,3,3,0,0,2,3,0,2,QA Automation Engineer
+P0055,5,6,3,2,1,2,3,0,0,2,3,0,3,Cloud Engineer
+P0056,4,3,4,2,3,0,2,0,0,1,1,2,1,Cybersecurity Analyst
+P0057,4,2,4,2,2,1,2,3,0,1,1,3,0,Backend Developer
+P0058,5,4,1,0,1,2,1,1,0,0,0,1,2,Full Stack Developer
+P0059,4,0,3,0,2,2,0,0,3,3,1,3,2,Machine Learning Engineer
+P0060,4,3,2,1,1,2,2,1,2,0,0,1,3,Cybersecurity Analyst
+P0061,3,3,4,2,0,2,0,2,0,3,1,0,2,QA Automation Engineer
+P0062,0,0,0,1,0,1,1,3,0,3,0,0,2,Data Engineer
+P0063,5,4,2,3,0,3,2,2,3,0,1,2,0,Data Analyst
+P0064,5,6,0,0,1,1,2,3,2,0,2,3,1,Full Stack Developer
+P0065,5,3,3,0,3,1,3,3,1,3,1,3,1,QA Automation Engineer
+P0066,3,4,0,3,3,2,1,2,0,0,0,0,3,QA Automation Engineer
+P0067,4,4,2,0,1,1,2,3,0,2,0,1,1,Full Stack Developer
+P0068,5,1,2,0,0,2,3,0,1,0,1,3,2,Data Analyst
+P0069,2,4,1,2,0,1,2,2,0,0,0,1,0,Machine Learning Engineer
+P0070,0,4,3,0,0,2,0,1,2,0,2,0,0,Data Engineer
+P0071,1,1,2,0,0,1,0,1,0,2,0,0,3,Data Analyst
+P0072,0,7,1,3,2,3,2,1,1,1,1,1,2,Cloud Engineer
+P0073,1,3,0,1,3,0,1,1,2,0,0,3,2,Frontend Developer
+P0074,4,4,1,2,2,2,1,3,3,1,1,1,1,Data Scientist
+P0075,5,6,2,2,2,1,3,0,1,0,3,2,3,Frontend Developer
+P0076,1,2,0,0,0,3,1,3,0,1,0,3,3,Full Stack Developer
+P0077,4,1,4,1,0,1,2,2,3,2,2,2,0,Frontend Developer
+P0078,2,5,3,3,3,3,0,2,3,2,2,0,3,Data Scientist
+P0079,4,1,2,2,0,0,1,3,1,0,1,0,1,Data Analyst
+P0080,4,0,3,1,1,1,0,1,1,0,2,0,1,DevOps Engineer
+P0081,0,5,2,2,3,0,0,1,3,0,3,0,2,AI Engineer
+P0082,5,5,1,3,2,1,3,1,0,1,1,2,3,Machine Learning Engineer
+P0083,2,6,2,2,3,0,1,1,1,2,2,2,3,DevOps Engineer
+P0084,4,3,1,2,0,0,2,1,1,1,3,0,0,AI Engineer
+P0085,0,3,1,2,0,0,1,2,3,2,1,1,2,Full Stack Developer
+P0086,0,3,2,1,0,0,1,3,1,3,1,2,3,Cloud Engineer
+P0087,4,5,4,0,0,0,1,0,1,1,2,3,3,Cloud Engineer
+P0088,5,5,0,2,2,2,2,3,0,3,3,2,1,Data Scientist
+P0089,3,3,2,3,2,1,1,0,1,3,1,2,1,DevOps Engineer
+P0090,1,6,2,3,1,2,0,3,0,1,1,1,3,Machine Learning Engineer
+P0091,3,0,3,0,3,2,0,1,1,3,1,0,1,Cloud Engineer
+P0092,3,4,2,2,0,1,1,3,1,0,2,1,3,Data Scientist
+P0093,4,7,1,3,0,2,0,0,0,0,2,2,3,Backend Developer
+P0094,2,5,0,0,1,3,3,1,1,0,3,2,0,Data Scientist
+P0095,3,2,2,0,3,3,1,3,3,0,3,2,0,Data Engineer
+P0096,5,3,2,0,0,0,2,2,1,1,1,3,0,Cybersecurity Analyst
+P0097,0,1,2,0,1,0,2,2,2,0,0,0,0,Frontend Developer
+P0098,1,5,4,3,3,2,2,2,1,1,2,2,2,Full Stack Developer
+P0099,1,7,3,2,2,0,0,3,1,2,2,3,0,Backend Developer
+P0100,0,0,4,0,2,2,0,1,3,1,1,1,0,Cloud Engineer
+P0101,1,0,4,2,2,3,0,3,3,3,2,0,3,Data Engineer
+P0102,4,6,3,3,0,1,2,2,2,2,3,3,1,Cloud Engineer
+P0103,2,4,3,2,1,1,3,1,1,3,2,2,1,Cloud Engineer
+P0104,3,1,4,3,1,1,0,0,2,3,3,2,3,QA Automation Engineer
+P0105,3,7,3,0,3,0,3,2,1,0,3,2,1,DevOps Engineer
+P0106,5,2,4,1,3,0,1,2,2,0,1,0,0,Cybersecurity Analyst
+P0107,5,3,0,0,2,1,2,2,3,2,0,2,0,Data Engineer
+P0108,0,1,3,0,0,1,0,2,2,3,0,1,2,Backend Developer
+P0109,1,6,1,2,1,2,0,3,2,2,3,2,2,Backend Developer
+P0110,0,6,3,1,0,3,0,0,0,2,2,1,1,QA Automation Engineer
+P0111,1,4,0,2,0,3,0,0,3,1,1,3,2,Full Stack Developer
+P0112,0,6,0,3,0,1,2,2,2,3,2,1,3,Data Analyst
+P0113,4,4,2,1,0,1,2,2,1,1,1,3,0,Data Scientist
+P0114,5,5,2,2,3,0,3,0,2,2,2,3,1,Cybersecurity Analyst
+P0115,2,5,1,3,0,2,2,3,3,1,2,0,3,Data Analyst
+P0116,0,6,2,3,2,2,2,0,3,1,0,2,0,Machine Learning Engineer
+P0117,2,0,3,2,3,1,2,3,3,1,3,3,1,Cloud Engineer
+P0118,3,3,4,1,0,1,2,2,3,1,2,1,2,Data Analyst
+P0119,4,2,4,2,3,0,3,1,1,0,2,0,3,Cloud Engineer
+P0120,1,6,1,2,2,2,3,3,0,0,1,3,1,DevOps Engineer

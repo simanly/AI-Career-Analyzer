@@ -76,3 +76,77 @@ section { margin-top: 32px; }
 .badge.high { background: #d62839; }
 .badge.medium { background: #e0a100; }
 .badge.low { background: #2e9e5b; }
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 24px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+.brand { font-weight: 700; color: var(--red); text-decoration: none; font-size: 1.1rem; }
+.nav-links { display: flex; gap: 20px; }
+.nav-links a { color: var(--dark); text-decoration: none; padding-bottom: 2px; }
+.nav-links a.active { color: var(--red); border-bottom: 2px solid var(--red); }
+
+.muted { color: #6b5a62; }
+.actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+/* Roadmap */
+.timeline { margin: 24px 0; }
+.timeline-item { display: flex; gap: 16px; margin-bottom: 16px; }
+.timeline-dot {
+  flex: 0 0 36px; height: 36px; border-radius: 50%;
+  background: var(--red); color: #fff; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+.timeline-card { flex: 1; }
+.timeline-head { display: flex; justify-content: space-between; align-items: center; }
+.timeline-head h3 { margin: 0; }
+.timeline-card ul { margin: 8px 0 0; padding-left: 20px; }
+.timeline-card a { color: var(--red); }
+
+/* Footer, features, top match */
+.footer {
+  text-align: center;
+  padding: 24px;
+  margin-top: 40px;
+  color: #6b5a62;
+  border-top: 1px solid #eee;
+  font-size: 0.9rem;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 10px;
+}
+.feature-list li {
+  background: #fff;
+  border: 1px solid #eee;
+  border-left: 4px solid var(--red);
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+
+.top-match {
+  background: var(--dark);
+  color: #fff;
+  border-radius: 12px;
+  padding: 20px 24px;
+}
+.top-match .muted { color: #d9c7cf; }
+.top-match h3 { margin: 4px 0; font-size: 1.6rem; }
+.top-match strong { color: #ff8a9b; }
+
+/* Mobil */
+@media (max-width: 600px) {
+  .hero h1 { font-size: 1.8rem; }
+  .navbar { flex-direction: column; gap: 8px; }
+  .page { padding: 24px 16px; }
+  .timeline-head { flex-direction: column; align-items: flex-start; gap: 6px; }
+}

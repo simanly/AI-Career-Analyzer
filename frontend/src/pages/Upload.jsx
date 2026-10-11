@@ -56,7 +56,7 @@ export default function Upload({ onResult }) {
 
   return (
     <div className="page">
-      <h2>CV-ni yüklə</h2>
+      <h2>Upload your CV</h2>
 
       <div
         className={`dropzone ${dragging ? "dragging" : ""}`}
@@ -75,14 +75,18 @@ export default function Upload({ onResult }) {
         {file ? (
           <p><strong>{file.name}</strong> ({(file.size / 1024 / 1024).toFixed(2)} MB)</p>
         ) : (
-          <p>Faylı bura sürüklə və ya seçmək üçün kliklə<br /><small>PDF və ya DOCX, maksimum 5 MB</small></p>
+          <p>
+            Drag and drop your file here, or click to browse
+            <br />
+            <small>PDF or DOCX, max 5 MB</small>
+          </p>
         )}
       </div>
 
       <ErrorBox code={error?.code} message={error?.message} />
 
       <button className="btn" onClick={handleAnalyze} disabled={!file || loading}>
-        {loading ? "Analiz edilir..." : "Analyze"}
+        {loading ? "Analyzing..." : "Analyze"}
       </button>
     </div>
   );

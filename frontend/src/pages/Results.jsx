@@ -9,10 +9,18 @@ export default function Results({ result }) {
 
   return (
     <div className="page">
-      <h2>Nəticələr</h2>
+      <h2>Results</h2>
+
+      {careers[0] && (
+        <section className="top-match">
+          <span className="muted">Best career match</span>
+          <h3>{careers[0].name}</h3>
+          <strong>{Math.round(careers[0].score * 100)}% match</strong>
+        </section>
+      )}
 
       <section>
-        <h3>Tapılan bacarıqlar</h3>
+        <h3>Detected skills</h3>
         <div className="chips">
           {result.skills.map((s) => (
             <span className="chip" key={s}>{s}</span>
@@ -21,7 +29,7 @@ export default function Results({ result }) {
       </section>
 
       <section>
-        <h3>Uyğun karyeralar</h3>
+        <h3>Career matches</h3>
         {careers.map((c) => {
           const percent = Math.round(c.score * 100);
           return (
@@ -50,7 +58,10 @@ export default function Results({ result }) {
         </ul>
       </section>
 
-      <Link to="/upload" className="btn secondary">Yeni CV yüklə</Link>
+      <div className="actions">
+        <Link to="/roadmap" className="btn">View learning roadmap</Link>
+        <Link to="/upload" className="btn secondary">Upload a new CV</Link>
+      </div>
     </div>
   );
 }

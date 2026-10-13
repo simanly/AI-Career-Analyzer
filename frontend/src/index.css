@@ -150,3 +150,13 @@ section { margin-top: 32px; }
   .page { padding: 24px 16px; }
   .timeline-head { flex-direction: column; align-items: flex-start; gap: 6px; }
 }
+.matched { margin: 6px 0 0; font-size: 0.9rem; }
+
+.gap-list li.gap-item { flex-direction: column; align-items: stretch; gap: 10px; }
+.gap-top { display: flex; justify-content: space-between; align-items: center; }
+.chips.small .chip { font-size: 0.8rem; padding: 4px 10px; }
+.chip.outline { background: #fff; color: var(--dark); border: 1px solid var(--dark); }
+
+.road-career { margin-top: 20px; }
+.road-career summary { cursor: pointer; font-size: 1.1rem; padding: 8px 0; }
+.timeline-card h3 { margin-top: 0; }

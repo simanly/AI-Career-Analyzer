@@ -1,15 +1,45 @@
 import { mockResult } from "../mock/mockResult";
 
-const API_URL = import.meta.env.VITE_API_URL; // e.g. https://your-backend.onrender.com
+const API_URL = import.meta.env.VITE_API_URL;
 const USE_MOCK = import.meta.env.VITE_USE_MOCK === "true" || !API_URL;
 
+const toArray = (v) => (Array.isArray(v) ? v : []);
+const lower = (v, fallback) => String(v ?? fallback).toLowerCase();
+
+function normalizeScore(s) {
+  const n = Number(s) || 0;
+  return n > 1 ? n / 100 : n;
+}
+
 function normalize(data) {
-  return {
-    skills: data?.skills ?? [],
-    careers: data?.careers ?? [],
-    skill_gap: data?.skill_gap ?? [],
-    roadmap: data?.roadmap ?? [],
-  };
+  const skills = toArray(data?.skills).map((s) =>
+    typeof s === "string" ? s : s?.name ?? s?.skill ?? ""
+  );
+
+  const careers = toArray(data?.careers).map((c) => ({
+    id: c.career_id ?? c.id,
+    name: c.career_name ?? c.name,
+    score: normalizeScore(c.score),
+    matched_skills: toArray(c.matched_skills),
+    missing_skills: toArray(c.missing_skills),
+  }));
+
+  const skill_gap = toArray(data?.skill_gap).map((g) => ({
+    id: g.career_id ?? g.id,
+    career: g.career_name ?? g.name,
+    gap_count: g.gap_count ?? toArray(g.missing_skills).length,
+    missing_skills: toArray(g.missing_skills),
+    priority: lower(g.priority, "medium"),
+  }));
+
+  const roadmap = toArray(data?.roadmap).map((r) => ({
+    id: r.career_id ?? r.id,
+    career: r.career_name ?? r.name,
+    steps: toArray(r.steps),
+  }));
+
+  // backend-in "text" sahəsi (CV mətni) burada atılır
+  return { skills, careers, skill_gap, roadmap };
 }
 
 export async function analyzeCv(file) {
@@ -33,7 +63,8 @@ export async function analyzeCv(file) {
   const data = await res.json().catch(() => null);
 
   if (!res.ok) {
-    const err = new Error(data?.error || "An unknown error occurred.");
+    const detail = typeof data?.detail === "string" ? data.detail : null;
+    const err = new Error(data?.error || detail || "The server could not process this file.");
     err.code = data?.code || "UNKNOWN_ERROR";
     throw err;
   }

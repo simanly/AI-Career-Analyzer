@@ -1,42 +1,50 @@
 export const mockResult = {
   skills: ["Python", "SQL", "Git", "Pandas"],
   careers: [
-    { id: "data-analyst", name: "Data Analyst", score: 0.85 },
-    { id: "data-scientist", name: "Data Scientist", score: 0.72 },
-    { id: "backend-developer", name: "Backend Developer", score: 0.55 },
+    {
+      career_id: "data-analyst",
+      career_name: "Data Analyst",
+      score: 0.85,
+      matched_skills: ["Python", "SQL"],
+      missing_skills: ["Power BI", "Statistics"],
+    },
+    {
+      career_id: "backend-developer",
+      career_name: "Backend Developer",
+      score: 0.55,
+      matched_skills: ["Python", "Git"],
+      missing_skills: ["Django", "Docker"],
+    },
   ],
   skill_gap: [
-    { skill: "Power BI", priority: "high" },
-    { skill: "Statistics", priority: "medium" },
-    { skill: "Docker", priority: "low" },
+    {
+      career_id: "data-analyst",
+      career_name: "Data Analyst",
+      gap_count: 2,
+      missing_skills: ["Power BI", "Statistics"],
+      priority: "medium",
+    },
+    {
+      career_id: "backend-developer",
+      career_name: "Backend Developer",
+      gap_count: 2,
+      missing_skills: ["Django", "Docker"],
+      priority: "high",
+    },
   ],
   roadmap: [
     {
-      step: 1,
-      skill: "Power BI",
-      priority: "high",
-      duration_weeks: 3,
-      resources: [
-        { title: "Power BI documentation", url: "https://learn.microsoft.com/power-bi/" },
+      career_id: "data-analyst",
+      career_name: "Data Analyst",
+      steps: [
+        { skill: "Power BI", tasks: ["Learn the basics", "Build a sales dashboard"] },
+        { skill: "Statistics", tasks: ["Review descriptive statistics", "Practice hypothesis testing"] },
       ],
     },
     {
-      step: 2,
-      skill: "Statistics",
-      priority: "medium",
-      duration_weeks: 4,
-      resources: [
-        { title: "Khan Academy: Statistics", url: "https://www.khanacademy.org/math/statistics-probability" },
-      ],
-    },
-    {
-      step: 3,
-      skill: "Docker",
-      priority: "low",
-      duration_weeks: 2,
-      resources: [
-        { title: "Docker: Get started", url: "https://docs.docker.com/get-started/" },
-      ],
+      career_id: "backend-developer",
+      career_name: "Backend Developer",
+      steps: [],
     },
   ],
 };

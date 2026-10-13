@@ -50,6 +50,7 @@ df_full = pd.read_csv(IN)
 df = df_full.sample(n=1000, random_state=42)
 done = pd.read_csv(OUT) if os.path.exists(OUT) else pd.DataFrame(columns=["Link"])
 todo = df[~df["Link"].isin(done["Link"])]
+todo = todo[:100]
 rows = done.to_dict("records")
 
 for n, url in enumerate(todo["Link"], 1):
@@ -67,3 +68,9 @@ for n, url in enumerate(todo["Link"], 1):
 
 pd.DataFrame(rows).to_csv(OUT, index=False, encoding="utf-8-sig")
 print("Done:", len(rows), "rows")
+
+import pandas as pd
+d = pd.read_csv("hellojob_details.csv")
+print(d.isna().mean().round(2))   # boş faiz
+print(d.description.str.len().describe())
+print(d.city.value_counts().head())

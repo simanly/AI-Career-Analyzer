@@ -1,7 +1,7 @@
 import { mockResult } from "../mock/mockResult";
 
-const USE_MOCK = true; // set to false when the backend is ready
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
+const API_URL = import.meta.env.VITE_API_URL; // e.g. https://your-backend.onrender.com
+const USE_MOCK = import.meta.env.VITE_USE_MOCK === "true" || !API_URL;
 
 function normalize(data) {
   return {

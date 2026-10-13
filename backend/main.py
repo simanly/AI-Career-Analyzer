@@ -12,10 +12,11 @@ from roadmap import generate_roadmap
 
 app = FastAPI(title="AI Career Analyzer API")
 
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
         "https://ai-career-analyzer-two.vercel.app",
     ],
     allow_credentials=True,

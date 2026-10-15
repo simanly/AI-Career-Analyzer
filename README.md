@@ -220,8 +220,11 @@ git push -u origin feature/your-feature
 Built as a collaborative Machine Learning project by the **AI Career & Skill Analyzer** team.
 
 Sofiya Imanli - https://github.com/simanly
+
 Lala  Shirinli - https://github.com/lalee8
+
 Nigar Nagizade - https://github.com/nnagizade
+
 Efsan Satiyev - https://github.com/Efsann
 
 ## 📄 License

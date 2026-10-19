@@ -38,8 +38,13 @@ function normalize(data) {
     steps: toArray(r.steps),
   }));
 
+  const prediction = toArray(data?.ml_prediction?.top_predictions).map((p) => ({
+    category: String(p.category ?? ""),
+    probability: normalizeScore(p.probability),
+  }));
+
   // backend-in "text" sahəsi (CV mətni) burada atılır
-  return { skills, careers, skill_gap, roadmap };
+  return { skills, careers, skill_gap, roadmap, prediction };
 }
 
 export async function analyzeCv(file) {

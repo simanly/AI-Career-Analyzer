@@ -3,3 +3,7 @@ uvicorn==0.54.0
 pypdf==6.19.0
 python-docx==1.2.0
 python-multipart==0.0.32
+scikit-learn==1.6.1
+joblib
+numpy
+scipy

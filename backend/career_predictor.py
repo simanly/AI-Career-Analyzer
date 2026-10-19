@@ -1,6 +1,8 @@
 from pathlib import Path
 import joblib
 
+import resume_features  # noqa: F401  (model pickle-ı bu modula istinad edir)
+
 CAREERS = {
     "backend-developer": {
         "name": "Backend Developer",
@@ -73,7 +75,7 @@ def predict_careers(skills: list[str]) -> list[dict]:
     return results
 
 
-def predict_resume_category(resume_text: str) -> dict:
+def predict_resume_category(resume_text: str, top_k: int = 3) -> dict:
     if model is None:
         raise RuntimeError(
             "ML modeli tapılmadı. Əvvəl train_model.py faylını işə sal."
@@ -82,19 +84,25 @@ def predict_resume_category(resume_text: str) -> dict:
     if not isinstance(resume_text, str) or not resume_text.strip():
         raise ValueError("CV mətni boş ola bilməz.")
 
-    prediction = model.predict([resume_text])[0]
+    class_probabilities = model.predict_proba([resume_text])[0]
 
-    probabilities = None
-    if hasattr(model, "predict_proba"):
-        class_probabilities = model.predict_proba([resume_text])[0]
-        probabilities = {
-            str(label): round(float(probability), 4)
-            for label, probability in zip(
-                model.classes_, class_probabilities
-            )
-        }
+    ranked = sorted(
+        zip(model.classes_, class_probabilities),
+        key=lambda pair: pair[1],
+        reverse=True,
+    )
+
+    top_predictions = [
+        {"category": str(label), "probability": round(float(probability), 4)}
+        for label, probability in ranked[:top_k]
+    ]
 
     return {
-        "predicted_category": str(prediction),
-        "probabilities": probabilities
+        "predicted_category": top_predictions[0]["category"],
+        "confidence": top_predictions[0]["probability"],
+        "top_predictions": top_predictions,
+        "probabilities": {
+            str(label): round(float(probability), 4)
+            for label, probability in ranked
+        },
     }

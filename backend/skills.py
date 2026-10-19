@@ -1,3 +1,5 @@
+import re
+
 SKILLS = [
     "Python",
     "SQL",
@@ -22,14 +24,17 @@ SKILLS = [
     "Web Scraping",
 ]
 
+# Tam söz uyğunluğu: "Git" → "digital", "CSS" → "success" kimi yalançı tapıntıların qarşısını alır.
+SKILL_PATTERNS = {
+    skill: re.compile(r"(?<![a-z0-9])" + re.escape(skill.lower()) + r"(?![a-z0-9])")
+    for skill in SKILLS
+}
+
 
 def extract_skills(text: str) -> list[str]:
     text_lower = text.lower()
 
-    found_skills = []
-
-    for skill in SKILLS:
-        if skill.lower() in text_lower:
-            found_skills.append(skill)
-
-    return found_skills
+    return [
+        skill for skill, pattern in SKILL_PATTERNS.items()
+        if pattern.search(text_lower)
+    ]

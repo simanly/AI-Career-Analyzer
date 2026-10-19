@@ -1,19 +1,37 @@
 import { Link, Navigate } from "react-router-dom";
 
+const formatCategory = (c) =>
+  c.toLowerCase().split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
+
 const PRIORITY_LABEL = { high: "High", medium: "Medium", low: "Low" };
 
 export default function Results({ result }) {
   if (!result) return <Navigate to="/upload" replace />;
 
   const careers = [...result.careers].sort((a, b) => b.score - a.score);
+  const prediction = result.prediction ?? [];
 
   return (
     <div className="page">
       <h2>Results</h2>
 
+      {prediction[0] && (
+        <section className="top-match">
+          <span className="muted">Predicted field (AI model)</span>
+          <h3>{formatCategory(prediction[0].category)}</h3>
+          <strong>{Math.round(prediction[0].probability * 100)}% confidence</strong>
+          {prediction.length > 1 && (
+            <p className="muted">
+              Other possible fields:{" "}
+              {prediction.slice(1).map((p) => `${formatCategory(p.category)} (${Math.round(p.probability * 100)}%)`).join(", ")}
+            </p>
+          )}
+        </section>
+      )}
+
       {careers[0] && (
         <section className="top-match">
-          <span className="muted">Best career match</span>
+          <span className="muted">Best skill-based match</span>
           <h3>{careers[0].name}</h3>
           <strong>{Math.round(careers[0].score * 100)}% match</strong>
         </section>

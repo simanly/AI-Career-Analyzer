@@ -67,6 +67,16 @@ export async function analyzeCv(file) {
 
   const data = await res.json().catch(() => null);
 
+  // JSON cavabı olmayan 5xx: backend işləmir, başlamaqdadır (Render) və ya proxy qoşula bilmir.
+  if (!res.ok && !data) {
+    const err = new Error(
+      "The analysis server is not responding. Make sure the backend is running " +
+        "(cd backend && uvicorn main:app --port 8000), or try again in a minute if it is waking up."
+    );
+    err.code = "SERVER_UNAVAILABLE";
+    throw err;
+  }
+
   if (!res.ok) {
     const detail = typeof data?.detail === "string" ? data.detail : null;
     const err = new Error(data?.error || detail || "The server could not process this file.");

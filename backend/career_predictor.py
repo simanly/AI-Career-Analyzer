@@ -24,6 +24,19 @@ CAREERS = {
             "scikit-learn", "Machine Learning", "NumPy"
         ]
     },
+    "data-analyst": {
+        "name": "Data Analyst",
+        "required_skills": [
+            "SQL", "Excel", "Power BI", "Tableau",
+            "Python", "Data Visualization"
+        ]
+    },
+    "devops-engineer": {
+        "name": "DevOps Engineer",
+        "required_skills": [
+            "Docker", "Kubernetes", "AWS", "Linux", "Git", "Terraform"
+        ]
+    },
     "frontend-developer": {
         "name": "Frontend Developer",
         "required_skills": [

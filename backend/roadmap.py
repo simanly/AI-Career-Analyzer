@@ -26,6 +26,14 @@ ROADMAPS = {
 }
 
 
+def default_steps(skill: str) -> list[str]:
+    return [
+        f"Learn {skill} fundamentals",
+        f"Practice {skill} with small exercises",
+        f"Build a small project that uses {skill}",
+    ]
+
+
 def generate_roadmap(skill_gap: list[dict]) -> list[dict]:
     roadmap = []
 
@@ -33,11 +41,10 @@ def generate_roadmap(skill_gap: list[dict]) -> list[dict]:
         steps = []
 
         for skill in career["missing_skills"]:
-            if skill in ROADMAPS:
-                steps.append({
-                    "skill": skill,
-                    "steps": ROADMAPS[skill]
-                })
+            steps.append({
+                "skill": skill,
+                "steps": ROADMAPS.get(skill) or default_steps(skill)
+            })
 
         roadmap.append({
             "career_id": career["career_id"],
